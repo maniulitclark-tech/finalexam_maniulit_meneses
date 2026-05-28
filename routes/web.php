@@ -27,7 +27,13 @@ Route::middleware('auth')->group(function () {
     // Employee routes
     Route::get('employee', [\App\Http\Controllers\employeecontroller::class, 'index'])->name('employee.index');
 
-    
+    Route::get('students', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
+    Route::post('students', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
+    Route::get('students/create', [\App\Http\Controllers\StudentController::class, 'create'])->name('student.create');
+    Route::post('students/create', [\App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
+    Route::get('students/{id}/edit', [\App\Http\Controllers\StudentController::class, 'edit'])->name('student.edit');
+    Route::put('students/{id}', [\App\Http\Controllers\StudentController::class, 'update'])->name('student.update');
+    Route::delete('students/{id}', [\App\Http\Controllers\StudentController::class, 'destroy'])->name('student.destroy');
 
 
 
