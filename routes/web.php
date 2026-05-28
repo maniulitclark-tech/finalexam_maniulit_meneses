@@ -28,6 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::get('employee', [\App\Http\Controllers\employeecontroller::class, 'index'])->name('employee.index');
 
     
+    Route::get('student', [\App\Http\Controllers\employeecontroller::class, 'index'])->name('student.index');
+    Route::get('student/create', [\App\Http\Controllers\employeecontroller::class, 'create'])->name('student.create');
+    Route::put('student', [\App\Http\Controllers\employeecontroller::class, 'store'])->name('student.store');
 
 
 
