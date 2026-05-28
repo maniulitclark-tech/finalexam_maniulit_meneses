@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
     // Employee routes
     Route::get('employee', [\App\Http\Controllers\employeecontroller::class, 'index'])->name('employee.index');
 
+<<<<<<< HEAD
     Route::get('students', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
     Route::post('students', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
     Route::get('students/create', [\App\Http\Controllers\StudentController::class, 'create'])->name('student.create');
@@ -34,6 +35,12 @@ Route::middleware('auth')->group(function () {
     Route::get('students/{id}/edit', [\App\Http\Controllers\StudentController::class, 'edit'])->name('student.edit');
     Route::put('students/{id}', [\App\Http\Controllers\StudentController::class, 'update'])->name('student.update');
     Route::delete('students/{id}', [\App\Http\Controllers\StudentController::class, 'destroy'])->name('student.destroy');
+=======
+    
+    Route::get('student', [\App\Http\Controllers\employeecontroller::class, 'index'])->name('student.index');
+    Route::get('student/create', [\App\Http\Controllers\employeecontroller::class, 'create'])->name('student.create');
+    Route::put('student', [\App\Http\Controllers\employeecontroller::class, 'store'])->name('student.store');
+>>>>>>> 2d0451e5b6478283f1ee07a7599beb4563ebee0c
 
 
 
